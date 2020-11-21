@@ -6,11 +6,11 @@ import time
 
 
 def meal_deal(food_name):
-    location = pyautogui.locateOnScreen(f'{food_name}.png', confidence=0.90)
+    location = pyautogui.locateOnScreen(f'images/{food_name}.png', confidence=0.90)
     if location is not None:
         pyautogui.click(location)
         time.sleep(0.5)
-        wished_locaiton = pyautogui.locateOnScreen(f'wished_{food_name}.png', confidence=0.95)
+        wished_locaiton = pyautogui.locateOnScreen(f'images/wished_{food_name}.png', confidence=0.95)
         pyautogui.click(wished_locaiton)
         time.sleep(0.5)
 
@@ -24,10 +24,10 @@ while True:
     # cv2.imshow("pencere", img)
     # cv2.waitKey(1)
 
-    penguin_location = pyautogui.locateOnScreen('pen1.png', confidence=0.7)
-    empty_table_location = pyautogui.locateOnScreen('table.png', confidence=0.9)
-    empty_table_location_2 = pyautogui.locateOnScreen('table2.png', confidence=0.9)
-    empty_table_location_3 = pyautogui.locateOnScreen('table3.png', confidence=0.9)
+    penguin_location = pyautogui.locateOnScreen('images/pen1.png', confidence=0.7)
+    empty_table_location = pyautogui.locateOnScreen('images/table.png', confidence=0.9)
+    empty_table_location_2 = pyautogui.locateOnScreen('images/table2.png', confidence=0.9)
+    empty_table_location_3 = pyautogui.locateOnScreen('images/table3.png', confidence=0.9)
     if penguin_location is not None:
         pyautogui.click(penguin_location)
         time.sleep(0.5)
@@ -38,11 +38,11 @@ while True:
         elif empty_table_location_3 is not None:
             pyautogui.click(empty_table_location_3)
 
-    money_location = pyautogui.locateOnScreen('money.png', confidence=0.65)
+    money_location = pyautogui.locateOnScreen('images/money.png', confidence=0.65)
     if money_location is not None:
         pyautogui.click(money_location)
 
-    customer_location = pyautogui.locateOnScreen('take_order.png', confidence=0.75)
+    customer_location = pyautogui.locateOnScreen('images/take_order.png', confidence=0.75)
     if customer_location is not None:
         pyautogui.click(customer_location)
         time.sleep(1)
